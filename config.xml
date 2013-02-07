@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "uk.co.simonberry.www"
+	version 	= "1.0.0">
+
+	<name>Simon Berry App</name>
+
+	<description>
+		
+	</description>
+
+	<author href="http://www.chrislomas.co.uk"
+		email="chris@chrislomas.co.uk">
+		Chris Lomas Ltd
+	</author>
+
+	<icon src="icon.png" gap:role="default" />
+	
+	<icon src="img/l/apple-touch-icon.png" width="57" height="57" />
+	<icon src="img/m/apple-touch-icon.png" gap:platform="ios" width="72" height="72" />
+	<icon src="img/h/apple-touch-icon.png" width="114" height="114" />
+	
+	<icon src="img/l/apple-touch-icon.png" gap:platform="android" gap:density="ldpi" />
+	<icon src="img/m/apple-touch-icon.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="img/h/apple-touch-icon.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="img/h/apple-touch-icon.png" gap:platform="android" gap:density="xdpi" />
+
+	<icon src="img/blackberry-icon.png" gap:platform="blackberry" />
+	
+	<gap:splash src="img/startup.png" />
+
+	<gap:splash src="img/startup.png" width="320" height="480" />
+	<gap:splash src="img/startup-retina.png" width="640" height="960" />
+	<gap:splash src="img/startup-tablet-landscape.png" width="1024" height="768" />
+	<gap:splash src="img/startup-tablet-portrait.png" width="768" height="1024" />
+
+	<gap:splash src="img/startup.png" gap:platform="android" gap:density="ldpi" />
+	<gap:splash src="img/startup-retina.png" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="img/startup-tablet-portrait.png" gap:platform="android" gap:density="hdpi" />
+
+	<gap:splash src="img/startup-blackberry.png" gap:platform="blackberry" />
+
+	<gap:splash src="img/startup.jpg" gap:platform="winphone" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+
+	<gap:plugin name="ChildBrowser" version="~3" />
+
+	<access origin="http://www.simonberry.co.uk" subdomains="true" />
+	<access origin="https://www.simonberry.co.uk" subdomains="true" />
+        <access origin="http://simonberry.co.uk" subdomains="true" />
+        <access origin="https://simonberry.co.uk" subdomains="true" />
+
+	<preference name="orientation" value="default" />
+	<preference name="webviewbounce" value="false" />
+	<preference name="phonegap-version" value="1.9.0" />
+</widget>
