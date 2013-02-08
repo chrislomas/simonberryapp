@@ -10,3 +10,15 @@ a#register {
 .content {
     border: none !important;
 }
+.lightblue {
+    color: #A5B1D7;
+}
+.darkblue {
+    color: #444B68;
+}
+h2 {
+    font-family:"Trebuchet MS";
+}
+p {
+    margin: 2px 0;
+}

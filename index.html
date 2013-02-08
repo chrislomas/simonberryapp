@@ -73,13 +73,13 @@
         <div data-role="page" id="login">
 
             <div data-role="header">
-                <a href="#landing" data-icon="delete" data-transition="slide">Cancel</a>
-                <h1>Login</h1>
-                <a href="#landing" data-icon="check" data-theme="b" data-transition="slide">Save</a>
+                <a href="#landing" data-icon="home" data-transition="reverse slide">Home</a>
+                <h1>Simon Berry</h1>
             </div><!-- /header -->
 
             <div data-role="content" data-theme="a" class="content">	
-                <form action="form.php" method="post">
+                <h2>log<span class="lightblue">in</span></h2>
+                <form id="loginform">
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="email">E-mail</label>
                         <input type="text" name="email" id="email" value="" placeholder="email"/>
@@ -88,6 +88,7 @@
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" value="" placeholder="password"/>
                     </div>
+                    <a id="submitloginform" href="#landing" data-role="button" data-transition="slide">Log In</a>
                 </form>
             </div><!-- /content -->
 
@@ -97,13 +98,13 @@
         <div data-role="page" id="register">
 
             <div data-role="header">
-                <a href="#landing" data-icon="delete" data-transition="slide">Cancel</a>
-                <h1>Create Account</h1>
-                <a href="#landing" data-icon="check" data-theme="b" data-transition="slide">Save</a>
+                <a href="#landing" data-icon="home" data-transition="reverse slide">Home</a>
+                <h1>Simon Berry</h1>
             </div><!-- /header -->
 
-            <div data-role="content" data-theme="a" class="content">	
-                <form action="form.php" method="post">
+            <div data-role="content" data-theme="a" class="content">
+                <h2>create<span class="lightblue">account</span></h2>
+                <form id="createaccountform">
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" value="" placeholder="name"/>
@@ -115,6 +116,7 @@
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="username">Phone</label>
                         <input type="text" name="phone" id="phone" value="" placeholder="phone"/>
+                        <a id="submitcreateaccountform" href="#landing" data-role="button" data-transition="slide">Submit</a>
                     </div>
                 </form>
             </div><!-- /content -->
@@ -125,11 +127,12 @@
         <div data-role="page" id="requestguest">
 
             <div data-role="header">
-                <a href="#landing" data-icon="delete" data-transition="slide">Cancel</a>
-                <h1>Request Appointment</h1>
+                <a href="#landing" data-icon="home" data-transition="reverse slide">Home</a>
+                <h1>Simon Berry</h1>
             </div><!-- /header -->
 
-            <div data-role="content" data-theme="a" class="content">	
+            <div data-role="content" data-theme="a" class="content">
+                <h2>request<span class="lightblue">appointment</span></h2>
                 <form id="requestguestform">
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestname">Name</label>
@@ -153,20 +156,21 @@
         <div data-role="page" id="contact">
 
             <div data-role="header">
-                <a href="#landing" data-icon="delete" data-transition="slide">Cancel</a>
-                <h1>Contact Us</h1>
+                <a href="#landing" data-icon="home" data-transition="reverse slide">Home</a>
+                <h1>Simon Berry</h1>
             </div><!-- /header -->
 
             <div data-role="content" data-theme="a" class="content">
-                <h1>Contact Us</h1>
+                <h2>contact<span class="lightblue">us</span></h2>
                 <p>41a Marshall Terrace</p>
                 <p>Gilesgate</p>
                 <p>Durham</p>
                 <p>DH1 2HX</p>
                 <p>United Kingdom</p>
                 <p><a href="mailto:info@simonberry.co.uk">info@simonberry.co.uk</a></p>
-                <p>Tel: 0191 375 7544</p>
-                <h1>Find Us</h1>
+                <p>&nbsp;</p>
+                <p>Tel: <a href="tel:0191 375 7544">0191 375 7544</a></p>
+                <h2>find<span class="lightblue">us</span></h2>
                 <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=simon+berry+optician&amp;aq=&amp;sll=47.73855,12.508828&amp;sspn=32.133206,86.572266&amp;ie=UTF8&amp;hq=simon+berry+optician&amp;hnear=&amp;t=m&amp;ll=54.777029,-1.56435&amp;spn=0.034653,0.073128&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=simon+berry+optician&amp;aq=&amp;sll=47.73855,12.508828&amp;sspn=32.133206,86.572266&amp;ie=UTF8&amp;hq=simon+berry+optician&amp;hnear=&amp;t=m&amp;ll=54.777029,-1.56435&amp;spn=0.034653,0.073128&amp;z=13" style="color:#0000FF;text-align:left">View Larger Map</a></small>
             </div><!-- /content -->
 
