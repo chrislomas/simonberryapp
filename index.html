@@ -17,11 +17,35 @@
 
             <div data-role="content" >	
                 <img src="img/SB-logo-pro.png" style="width: 80%;margin: 30% 10%;" />
+                <a href="#login" data-role="button">Login</a>
+                <a href="#register" data-role="button">Create Account</a>
             </div><!-- /content -->
 
         </div><!-- /page one -->
 
 
+        <!-- Start of second page: #two -->
+        <div data-role="page" id="login">
+
+            <div data-role="header">
+                <h1>Create Account</h1>
+            </div><!-- /header -->
+
+            <div data-role="content" data-theme="a">	
+                <form action="form.php" method="post">
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="email" value="" placeholder="email"/>
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" value="" placeholder="password"/>
+                    </div>
+                </form>
+            </div><!-- /content -->
+
+        </div><!-- /page two -->
+        
         <!-- Start of second page: #two -->
         <div data-role="page" id="register">
 
