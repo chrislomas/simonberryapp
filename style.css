@@ -7,3 +7,6 @@ a#register {
     -webkit-border-radius:0.4em;
     border-radius:0.4em
 }
+.ui-body-a {
+    border: none;
+}
