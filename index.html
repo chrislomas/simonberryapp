@@ -10,26 +10,6 @@
         <!--<script src="phonegap.js"></script>
         <script src="GAPlugin.js"></script>-->
         <script type="text/javascript">
-            function alertDismissed() {
-                // do something
-            }
-            function showAlertSuccess() {
-                navigator.notification.alert(
-                    'Appointment Request Sent', // message
-                    alertDismissed,             // callback
-                    null,                       // title
-                    null                        // buttonName
-                );
-            }
-            function showAlertFail() {
-                navigator.notification.alert(
-                    'Appointment Request Failed', // message
-                    alertDismissed,             // callback
-                    null,                       // title
-                    null
-                );
-            }
-            
             jQuery(document).ready(function(){
                 jQuery('#submitrequestguestform').click(function(){
 
@@ -42,10 +22,26 @@
                         data: { 'name': name, 'email': email, 'phone': phone },
                         url: 'http://www.chrislomas.co.uk/simonberryapp/requestguest.php',
                         success: function(data){
-                                showAlertSuccess();
+                                function alertDismissed() {
+                                    // do something
+                                }
+                                navigator.notification.alert(
+                                    'Appointment Request Sent', // message
+                                    alertDismissed,             // callback
+                                    null,                       // title
+                                    null                        // buttonName
+                                );
                         },
                         error: function(){
-                                showAlertFail();
+                                function alertDismissed() {
+                                    // do something
+                                }
+                                navigator.notification.alert(
+                                    'Appointment Request Failed', // message
+                                    alertDismissed,             // callback
+                                    null,                       // title
+                                    null
+                                );
                                 exit;
                         }
                     });
