@@ -17,8 +17,8 @@
 
             <div data-role="content" >	
                 <img src="img/SB-logo-pro.png" style="width: 80%;margin: 30% 10%;" />
-                <a href="#login" data-role="button">Login</a>
-                <a href="#register" data-role="button">Create Account</a>
+                <a href="#login" data-role="button" data-transition="flip">Login</a>
+                <a href="#register" data-role="button" data-transition="flip">Create Account</a>
             </div><!-- /content -->
 
         </div><!-- /page one -->
@@ -28,7 +28,9 @@
         <div data-role="page" id="login">
 
             <div data-role="header">
-                <h1>Create Account</h1>
+                <a href="#landing" data-icon="delete" data-transition="slide">Cancel</a>
+                <h1>Login</h1>
+                <a href="#landing" data-icon="check" data-theme="b" data-transition="slide">Save</a>
             </div><!-- /header -->
 
             <div data-role="content" data-theme="a">	
@@ -50,7 +52,9 @@
         <div data-role="page" id="register">
 
             <div data-role="header">
+                <a href="#landing" data-icon="delete" data-transition="slide">Cancel</a>
                 <h1>Create Account</h1>
+                <a href="#landing" data-icon="check" data-theme="b" data-transition="slide">Save</a>
             </div><!-- /header -->
 
             <div data-role="content" data-theme="a">	
