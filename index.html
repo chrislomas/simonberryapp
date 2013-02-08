@@ -3,9 +3,31 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.2.0.min">
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.2.0.min.css">
         <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
+        <script src="phonegap.js"></script>
+        <script src="GAPlugin.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+            function onDeviceReady() {
+                // Empty
+            }
+
+            function alertDismissed() {
+                // do something
+            }
+
+            function showAlert() {
+                navigator.notification.alert(
+                    'You are the winner!',  // message
+                    alertDismissed,         // callback
+                    'Game Over',            // title
+                    'Done'                  // buttonName
+                );
+            }
+
+        </script>
     </head>
 
     <body>
@@ -15,6 +37,7 @@
 
             <div data-role="content" >	
                 <img src="img/SB-logo-pro.png" style="width: 80%;margin: 30% 10%;" />
+                <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
             </div><!-- /content -->
 
         </div><!-- /page one -->
