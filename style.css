@@ -3,3 +3,6 @@ body {
         font-family: "Trebuchet MS", Arial;
         color: #FFFFFF;
 }
+.ui-body-c {
+    background-image: none !important;
+}
