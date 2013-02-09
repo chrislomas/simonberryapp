@@ -11,24 +11,34 @@
         <script src="GAPlugin.js"></script>-->
         <script type="text/javascript">
 
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+            //
+            function onDeviceReady() {
+                checkConnection();
+            }
+
+            function checkConnection() {
+                var networkState = navigator.network.connection.type;
+
+                var states = {};
+                states[Connection.UNKNOWN]  = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI]     = 'WiFi connection';
+                states[Connection.CELL_2G]  = 'Cell 2G connection';
+                states[Connection.CELL_3G]  = 'Cell 3G connection';
+                states[Connection.CELL_4G]  = 'Cell 4G connection';
+                states[Connection.NONE]     = 'No network connection';
+
+                alert('Connection type: ' + states[networkState]);
+            }
+
             jQuery(document).ready(function(){
 
-                checkConnection();
-
-                function checkConnection() {
-                    var networkState = navigator.network.connection.type;
-
-                    var states = {};
-                    states[Connection.UNKNOWN]  = 'Unknown connection';
-                    states[Connection.ETHERNET] = 'Ethernet connection';
-                    states[Connection.WIFI]     = 'WiFi connection';
-                    states[Connection.CELL_2G]  = 'Cell 2G connection';
-                    states[Connection.CELL_3G]  = 'Cell 3G connection';
-                    states[Connection.CELL_4G]  = 'Cell 4G connection';
-                    states[Connection.NONE]     = 'No network connection';
-
-                    alert('Connection type: ' + states[networkState]);
-                }
+                jQuery('#testconnection').click(function() {
+                    checkConnection();
+                });
 
                 jQuery('#submitrequestguestform').click(function(){
 
@@ -79,6 +89,7 @@
 
             <div data-role="content" >	
                 <img src="img/SB-logo-pro.png" style="width: 80%;margin: 30% 10%;" />
+                <a href="#" data-role="button" data-transition="slide" id="testconnection">Test Connection</a>
                 <a href="#login" data-role="button" data-transition="slide">Login</a>
                 <a href="#register" data-role="button" data-transition="flip" id="register">Create Account</a>
                 <a href="#requestguest" data-role="button" data-transition="slide">Request an Appointment</a>
