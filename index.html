@@ -11,44 +11,29 @@
         <script src="GAPlugin.js"></script>-->
         <script type="text/javascript">
 
-            document.addEventListener("deviceready", onDeviceReady, false);
-
-            // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-            //
-            function onDeviceReady() {
-                checkConnection();
-            }
+            //checkConnection();
 
             function checkConnection() {
-                var networkState = navigator.network.connection.type;
+                var networkState = navigator.onLine;
 
-                var states = {};
-                states[Connection.UNKNOWN]  = 'Unknown connection';
-                states[Connection.ETHERNET] = 'Ethernet connection';
-                states[Connection.WIFI]     = 'WiFi connection';
-                states[Connection.CELL_2G]  = 'Cell 2G connection';
-                states[Connection.CELL_3G]  = 'Cell 3G connection';
-                states[Connection.CELL_4G]  = 'Cell 4G connection';
-                states[Connection.NONE]     = 'No network connection';
-
-                alert('Connection type: ' + states[networkState]);
+                alert('Connection type: ' + networkState);
             }
 
             jQuery(document).ready(function(){
-
-                jQuery('#testconnection').click(function() {
-                    checkConnection();
-                });
 
                 jQuery('#submitrequestguestform').click(function(){
 
                     var name = $('#requestguestname').val();
                     var email = $('#requestguestemail').val();
                     var phone = $('#requestguestphone').val();
+                    var date = $('#requestguestdate').val();
+                    var time = $('#requestguesttime').val();
+                    var type = $('#requestguesttype').val();
+                    var optician = $('#requestguestoptician').val();
 
                     jQuery.ajax({
                         type: 'POST',
-                        data: { 'name': name, 'email': email, 'phone': phone },
+                        data: { 'name': name, 'email': email, 'phone': phone, 'date': date, 'time': time, 'type': type, 'optician': optician },
                         url: 'http://www.chrislomas.co.uk/simonberryapp/requestguest.php',
                         success: function(data){
                                 function alertDismissed() {
@@ -89,7 +74,6 @@
 
             <div data-role="content" >	
                 <img src="img/SB-logo-pro.png" style="width: 80%;margin: 30% 10%;" />
-                <a href="#" data-role="button" data-transition="slide" id="testconnection">Test Connection</a>
                 <a href="#login" data-role="button" data-transition="slide">Login</a>
                 <a href="#register" data-role="button" data-transition="flip" id="register">Create Account</a>
                 <a href="#requestguest" data-role="button" data-transition="slide">Request an Appointment</a>
@@ -166,33 +150,42 @@
                 <form id="requestguestform">
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestname">Name</label>
-                        <input type="text" name="requestguestname" id="requestguestname" value="" placeholder="name" />
+                        <input type="text" name="requestguestname" id="requestguestname" value="" data-mini="true" placeholder="name" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestemail">E-mail</label>
-                        <input type="email" name="requestguestemail" id="requestguestemail" value="" placeholder="email" />
+                        <input type="email" name="requestguestemail" id="requestguestemail" value="" data-mini="true" placeholder="email" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestphone">Phone</label>
-                        <input type="tel" name="requestguestphone" id="requestguestphone" value="" placeholder="phone" />
+                        <input type="tel" name="requestguestphone" id="requestguestphone" value="" data-mini="true" placeholder="phone" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestdate">Date</label>
-                        <input type="date" name="requestguestdate" id="requestguestdate" value="" placeholder="date" />
+                        <input type="date" name="requestguestdate" id="requestguestdate" value="" data-mini="true" placeholder="date" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguesttime">Time</label>
-                        <input type="tel" name="requestguesttime" id="requestguesttime" value="" placeholder="time" />
+                        <input type="tel" name="requestguesttime" id="requestguesttime" value="" data-mini="true" placeholder="time" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
-                        <label for="requestguesttype">Type of Appointment</label>
-                        <select name="requestguesttype" placeholder="type of appointment">
+                        <label for="requestguesttype" class="ui-hidden-accessible">Type of Appointment</label>
+                        <select name="requestguesttype" placeholder="type of appointment" data-mini="true">
+                            <option value="Eye Test">Eye Test</option>
+                            <option value="Hearing Test">Hearing Test</option>
+                            <option value="Contact Lens Check">Contact Lens Check</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="requestguestoptician" class="ui-hidden-accessible">Optician</label>
+                        <select name="requestguestoptician" placeholder="optician" data-mini="true">
+                            <option value="No Preference">Select who to see...</option>
                             <option value="Simon Berry">Simon Berry (Optician)</option>
                             <option value="Jonathan Berry">Jonathan Berry (Optician)</option>
                             <option value="Robert Ormerod">Robert Ormerod (Hearing Specialist)</option>
                         </select>
                     </div>
-                    <a id="submitrequestguestform" href="#landing" data-role="button" data-transition="slide">Send Request</a>
+                    <a id="submitrequestguestform" href="#landing" data-role="button" data-transition="slide" data-mini="true">Send Request</a>
                 </form>
             </div><!-- /content -->
 
