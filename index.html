@@ -136,15 +136,31 @@
                 <form id="requestguestform">
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestname">Name</label>
-                        <input type="text" name="requestguestname" id="requestguestname" value="" placeholder="name"/>
+                        <input type="text" name="requestguestname" id="requestguestname" value="" placeholder="name" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestemail">E-mail</label>
-                        <input type="email" name="requestguestemail" id="requestguestemail" value="" placeholder="email"/>
+                        <input type="email" name="requestguestemail" id="requestguestemail" value="" placeholder="email" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="requestguestphone">Phone</label>
-                        <input type="tel" name="requestguestphone" id="requestguestphone" value="" placeholder="phone"/>
+                        <input type="tel" name="requestguestphone" id="requestguestphone" value="" placeholder="phone" />
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="requestguestdate">Date</label>
+                        <input type="date" name="requestguestdate" id="requestguestdate" value="" placeholder="date" />
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="requestguesttime">Time</label>
+                        <input type="tel" name="requestguesttime" id="requestguesttime" value="" placeholder="time" />
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="requestguesttype">Type of Appointment</label>
+                        <select name="requestguesttype" placeholder="type of appointment">
+                            <option value="Simon Berry">Simon Berry (Optician)</option>
+                            <option value="Jonathan Berry">Jonathan Berry (Optician)</option>
+                            <option value="Robert Ormerod">Robert Ormerod (Hearing Specialist)</option>
+                        </select>
                     </div>
                     <a id="submitrequestguestform" href="#landing" data-role="button" data-transition="slide">Send Request</a>
                 </form>
@@ -162,16 +178,18 @@
 
             <div data-role="content" data-theme="a" class="content">
                 <h2>contact<span class="lightblue">us</span></h2>
+                <p>Simon Berry Optometrist</p>
                 <p>41a Marshall Terrace</p>
                 <p>Gilesgate</p>
                 <p>Durham</p>
                 <p>DH1 2HX</p>
                 <p>United Kingdom</p>
-                <p><a href="mailto:info@simonberry.co.uk">info@simonberry.co.uk</a></p>
-                <p>&nbsp;</p>
-                <p>Tel: <a href="tel:0191 375 7544">0191 375 7544</a></p>
-                <h2>find<span class="lightblue">us</span></h2>
-                <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=simon+berry+optician&amp;aq=&amp;sll=47.73855,12.508828&amp;sspn=32.133206,86.572266&amp;ie=UTF8&amp;hq=simon+berry+optician&amp;hnear=&amp;t=m&amp;ll=54.777029,-1.56435&amp;spn=0.034653,0.073128&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=simon+berry+optician&amp;aq=&amp;sll=47.73855,12.508828&amp;sspn=32.133206,86.572266&amp;ie=UTF8&amp;hq=simon+berry+optician&amp;hnear=&amp;t=m&amp;ll=54.777029,-1.56435&amp;spn=0.034653,0.073128&amp;z=13" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                
+                <a href="mailto:info@simonberry.co.uk" data-role="button">E-mail Us</a>
+                <a href="tel:0191 375 7544" data-role="button">Call Us</a>
+                <a href="http://www.simonberry.co.uk" data-role="button">Visit Website</a>
+                <a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=simon+berry+optician&amp;aq=&amp;sll=47.73855,12.508828&amp;sspn=32.133206,86.572266&amp;ie=UTF8&amp;hq=simon+berry+optician&amp;hnear=&amp;t=m&amp;ll=54.777029,-1.56435&amp;spn=0.034653,0.073128&amp;z=13" data-role="button">View Map</a>
+
             </div><!-- /content -->
 
         </div><!-- /page four -->
