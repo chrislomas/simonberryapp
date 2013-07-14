@@ -66,13 +66,6 @@
 
                 jQuery('#submitcreateaccountform').click(function(){
 
-                    navigator.notification.alert(
-                        'New User Created', // message
-                        alertDismissed,             // callback
-                        null,                       // title
-                        null                        // buttonName
-                    );
-
                     var name = $('#createaccountname').val();
                     var email = $('#createaccountemail').val();
                     var phone = $('#createaccountphone').val();
@@ -103,7 +96,6 @@
                                     null,                       // title
                                     null
                                 );
-                                exit;
                         }
                     });
 
