@@ -63,6 +63,47 @@
                     return true;
 
                 });
+
+                jQuery('#submitcreateaccountform').click(function(){
+
+                    var name = $('#createaccountname').val();
+                    var email = $('#createaccountemail').val();
+                    var phone = $('#createaccountphone').val();
+                    var password = $('#createaccountpassword').val();
+
+                    jQuery.ajax({
+                        type: 'POST',
+                        data: { 'name': name, 'email': email, 'phone': phone, 'password': password },
+                        url: 'http://www.simonberry.co.uk/create-new-user',
+                        success: function(data){
+                                function alertDismissed() {
+                                    // do something
+                                }
+                                navigator.notification.alert(
+                                    'New User Created', // message
+                                    alertDismissed,             // callback
+                                    null,                       // title
+                                    null                        // buttonName
+                                );
+                        },
+                        error: function(){
+                                function alertDismissed() {
+                                    // do something
+                                }
+                                navigator.notification.alert(
+                                    'Create New User Failed', // message
+                                    alertDismissed,             // callback
+                                    null,                       // title
+                                    null
+                                );
+                                exit;
+                        }
+                    });
+
+                    return true;
+
+                });
+
             });
         </script>
     </head>
@@ -121,15 +162,19 @@
                 <form id="createaccountform">
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" value="" placeholder="name"/>
+                        <input type="text" name="createaccountname" id="createaccountname" value="" placeholder="name"/>
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="username">E-mail</label>
-                        <input type="text" name="email" id="email" value="" placeholder="email"/>
+                        <input type="text" name="createaccountemail" id="createaccountemail" value="" placeholder="email"/>
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="username">Phone</label>
-                        <input type="text" name="phone" id="phone" value="" placeholder="phone"/>
+                        <input type="text" name="createaccountphone" id="createaccountphone" value="" placeholder="phone"/>
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="password">Password</label>
+                        <input type="password" name="createaccountpassword" id="createaccountpassword" value="" placeholder="password"/>
                         <a id="submitcreateaccountform" href="#landing" data-role="button" data-transition="slide">Submit</a>
                     </div>
                 </form>
