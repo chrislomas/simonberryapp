@@ -61,8 +61,6 @@
 
 	<preference name="orientation" value="default" />
 	<preference name="webviewbounce" value="false" />
-	<preference name="phonegap-version" value="cli-5.1.1" />
-        
-        <gap:plugin name="Analytics" /> <!-- latest release -->
+	<preference name="phonegap-version" value="cli-5.2.0" />
         
 </widget>
